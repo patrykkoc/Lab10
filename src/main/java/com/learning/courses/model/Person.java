@@ -33,6 +33,9 @@ public class Person {
 
   private String identityNumber;
 
+  private List<Paper> papers;
+
+
   @ManyToMany
   @JoinTable(name = "person_course",
       joinColumns = @JoinColumn(name = "person_id"),
