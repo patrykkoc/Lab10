@@ -1,27 +1,37 @@
 package com.learning.courses.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
+import org.hibernate.validator.constraints.ISBN;
+import org.springframework.data.annotation.Id;
 
 import java.util.List;
 
+@Entity
 public class Paper {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @NotNull
+    @NotBlank
     String TypeOfPaper;
 
     @NotEmpty
     List<Person> Authors ;
 
-    //13 cyfr
-    @Pattern(regexp = "^\\d{13}$")
-    String ISBN;
 
-    @NotEmpty
+    @ISBN(type = ISBN.Type.ISBN_13)
+    String ISBN_;
+
+    @NotBlank
     String Topic;
 
-    String Content;
+    @NotNull
+     String Content;
 
 }
 

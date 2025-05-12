@@ -8,10 +8,7 @@ public class PaperTest {
 
 
 
-    @Test
-    void shouldCreatePaperWithValidISBN() {
 
-    }
     @Test
     void shouldNotCreatePaperWithInvalidISBN() {
 
@@ -32,28 +29,17 @@ public class PaperTest {
     void shouldNotCreatePaperWithEmptyTypeOfPaper() {
 
     }
-    @Test
-    void shouldCreatePaperWhenTypeOfPaperIsNotEmpty() {
 
-    }
 
     @Test
     void shouldNotCreatePaperWithEmptyTopic() {
 
     }
 
-    @Test
-    void shouldCreatePaperWhenTopicIsNotEmpty() {
-
-    }
 
     @Test
     void shouldCreateValidPaperWithAllFields() {
 
-    }
-    @Test
-    void shouldCreatePaperWithMissingOptionalFields() {
-            //paper without content should be created
     }
 
 
